@@ -1,5 +1,0 @@
-wr841nv11_eu: httpd_build
-	make apxxfus_fs_prep enet=ag7240 lang=en oem_dir=WR841N11_EU
-	make mk_squashfs_build fs_size=0x2C0000
-	make image_build prefix=wr841nv11_eu
-
