@@ -1,1 +1,0 @@
-fileutil.o: fileutil.c
