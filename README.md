@@ -6,4 +6,4 @@ I tested everything with a fresh Debian 12 bookworm. Steps to reproduce:
 1. `apt install git make gcc g++ gcc-multilib lib32z1`
 2. `git clone https://github.com/technikamateur/wr841n-bootloader.git`
 3. `cd wr841n-bootloader/build`
-4. `make fs_prep && make uboot`
+4. `make`
