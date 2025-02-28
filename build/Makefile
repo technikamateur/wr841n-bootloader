@@ -109,16 +109,18 @@ export UBOOT_BINARY=tuboot.bin
 endif
 export UBOOT_FILE=u-boot.bin
 
+# Set a toolpath. A toolchain based on GCC 4.3.3 can be found here: https://archive.openwrt.org/backfire/10.03.1/ar71xx/
+export TOOLPATH=$(TOPDIR)/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.3.3+cs_uClibc-0.9.30.1/toolchain-mips_r2_gcc-4.3.3+cs_uClibc-0.9.30.1/usr
+export TOOLPREFIX=mips-openwrt-linux-uclibc-
+ifndef TOOLPATH
+$(error TOOLPATH not set. Hence I can't locate toolchain)
+endif
+
+# Changing PATH
+export PATH:=$(TOOLPATH)/bin:${PATH}
 
 export MAKEARCH=$(MAKE) ARCH=$(KERNELARCH) CROSS_COMPILE=$(TOOLPREFIX)
-export TOOLPATH=$(TOPDIR)/build/$(TOOLCHAIN)/$(TOOLARCH)/
 export UBOOTDIR=$(TOPDIR)/$(BOARD_TYPE)/boot/u-boot
-
-# Save PATH for later use for compiling host-only tools etc.
-#~export ORIGINAL_PATH:=$(PATH)
-# Set PATH so we find target compiler when say "gcc", etc.
-# as well as other tools we expect to find.
-export PATH:=$(TOOLPATH)/bin:${PATH}
 
 
 uboot_clean:

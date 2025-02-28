@@ -58,7 +58,7 @@ Linker script and memory map
                 0x0000000000000000                . = 0x0
                 0x0000000000000000                . = ALIGN (0x4)
 
-.text           0x000000009f000000     0x3270
+.text           0x000000009f000000     0x31e0
  *(.text)
  .text          0x000000009f000000      0x950 cpu/mips/start_bootstrap.o
                 0x000000009f000000                _start_bootstrap
@@ -103,126 +103,126 @@ Linker script and memory map
                 0x000000009f001630                timer_init
                 0x000000009f00166c                udelay
                 0x000000009f0016c8                get_ticks
- .text          0x000000009f0016e0      0xa90 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .text          0x000000009f0016e0      0xab0 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
                 0x000000009f0016e0                LzmaDecodeProperties
-                0x000000009f001758                LzmaDecode
- .text          0x000000009f002170      0x380 board/atheros/board953x/libboard953x.a(board953x.o)
-                0x000000009f002178                checkboard
-                0x000000009f002450                ath_mem_config
-                0x000000009f002214                ath_usb_initial_config
-                0x000000009f0024d4                initdram
-                0x000000009f002170                ath_gpio_config
- .text          0x000000009f0024f0      0x570 board/atheros/board953x/libboard953x.a(init-953x.o)
+                0x000000009f00177c                LzmaDecode
+ .text          0x000000009f002190      0x360 board/atheros/board953x/libboard953x.a(board953x.o)
+                0x000000009f002198                checkboard
+                0x000000009f00244c                ath_mem_config
+                0x000000009f002230                ath_usb_initial_config
+                0x000000009f0024cc                initdram
+                0x000000009f002190                ath_gpio_config
+ .text          0x000000009f0024f0      0x500 board/atheros/board953x/libboard953x.a(init-953x.o)
                 0x000000009f002560                ath_sys_frequency
-                0x000000009f0025d4                ath_ddr_initial_config
+                0x000000009f0025c8                ath_ddr_initial_config
                 0x000000009f002554                ath_uart_freq
                 0x000000009f002540                ath_ram_type
                 0x000000009f0024f0                ath_ddr_find_size
- .text          0x000000009f002a60      0x240 board/atheros/board953x/libboard953x.a(serial.o)
-                0x000000009f002b24                serial_setbrg
-                0x000000009f002a60                serial_tstc
-                0x000000009f002ab8                serial_putc
-                0x000000009f002b80                serial_init
-                0x000000009f002b2c                serial_puts
-                0x000000009f002a74                serial_getc
- .text          0x000000009f002ca0       0x10 board/atheros/board953x/libboard953x.a(ath_pci.o)
-                0x000000009f002ca8                pci_init_board
-                0x000000009f002ca0                plat_dev_init
- .text          0x000000009f002cb0      0x250 board/atheros/board953x/libboard953x.a(953x.o)
-                0x000000009f002cb0                lowlevel_init
- .text          0x000000009f002f00       0x10 cpu/mips/libmips.a(interrupts.o)
-                0x000000009f002f08                disable_interrupts
-                0x000000009f002f00                enable_interrupts
- .text          0x000000009f002f10      0x360 cpu/mips/libmips.a(cache.o)
-                0x000000009f003178                dcache_flush_range
-                0x000000009f002f58                mips_cache_reset
-                0x000000009f00311c                mips_cache_lock
-                0x000000009f002f10                simple_mips_cache_reset
-                0x000000009f0031f4                mips_icache_flush_ix
-                0x000000009f003224                mips_cache_lock_24k
-                0x000000009f0031a0                mips_cache_flush
-                0x000000009f0030f0                dcache_status
-                0x000000009f003100                dcache_disable
-                0x000000009f003270                . = ALIGN (0x4)
+ .text          0x000000009f0029f0      0x220 board/atheros/board953x/libboard953x.a(serial.o)
+                0x000000009f002aac                serial_setbrg
+                0x000000009f0029f0                serial_tstc
+                0x000000009f002a44                serial_putc
+                0x000000009f002b08                serial_init
+                0x000000009f002ab4                serial_puts
+                0x000000009f002a00                serial_getc
+ .text          0x000000009f002c10       0x10 board/atheros/board953x/libboard953x.a(ath_pci.o)
+                0x000000009f002c18                pci_init_board
+                0x000000009f002c10                plat_dev_init
+ .text          0x000000009f002c20      0x250 board/atheros/board953x/libboard953x.a(953x.o)
+                0x000000009f002c20                lowlevel_init
+ .text          0x000000009f002e70       0x10 cpu/mips/libmips.a(interrupts.o)
+                0x000000009f002e78                disable_interrupts
+                0x000000009f002e70                enable_interrupts
+ .text          0x000000009f002e80      0x360 cpu/mips/libmips.a(cache.o)
+                0x000000009f0030e8                dcache_flush_range
+                0x000000009f002ec8                mips_cache_reset
+                0x000000009f00308c                mips_cache_lock
+                0x000000009f002e80                simple_mips_cache_reset
+                0x000000009f003164                mips_icache_flush_ix
+                0x000000009f003194                mips_cache_lock_24k
+                0x000000009f003110                mips_cache_flush
+                0x000000009f003060                dcache_status
+                0x000000009f003070                dcache_disable
+                0x000000009f0031e0                . = ALIGN (0x4)
 
-.rodata         0x000000009f003270      0x440
+.rodata         0x000000009f0031e0      0x440
  *(.rodata)
- .rodata        0x000000009f003270       0x40 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
-                0x000000009f003270                version_string
- .rodata        0x000000009f0032b0      0x400 lib_bootstrap/libbootstrap.a(crc32.o)
+ .rodata        0x000000009f0031e0       0x40 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+                0x000000009f0031e0                version_string
+ .rodata        0x000000009f003220      0x400 lib_bootstrap/libbootstrap.a(crc32.o)
 
-.reginfo        0x000000009f0036b0       0x18
- .reginfo       0x000000009f0036b0       0x18 cpu/mips/start_bootstrap.o
+.reginfo        0x000000009f003620       0x18
+ .reginfo       0x000000009f003620       0x18 cpu/mips/start_bootstrap.o
 
-.rodata.str1.4  0x000000009f0036c8       0x3c
+.rodata.str1.4  0x000000009f003638       0x3c
  .rodata.str1.4
-                0x000000009f0036c8       0x3c board/atheros/board953x/libboard953x.a(board953x.o)
+                0x000000009f003638       0x3c board/atheros/board953x/libboard953x.a(board953x.o)
 
-.rel.dyn        0x000000009f003704        0x0
+.rel.dyn        0x000000009f003674        0x0
  .rel.dyn       0x0000000000000000        0x0 cpu/mips/start_bootstrap.o
-                0x000000009f003704                . = ALIGN (0x4)
+                0x000000009f003674                . = ALIGN (0x4)
 
-.data           0x000000009f003710        0x0 load address 0x000000009f003704
+.data           0x000000009f003680        0x0 load address 0x000000009f003674
  *(.data)
- .data          0x000000009f003710        0x0 cpu/mips/start_bootstrap.o
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(string.o)
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(crc32.o)
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(time.o)
- .data          0x000000009f003710        0x0 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .data          0x000000009f003710        0x0 board/atheros/board953x/libboard953x.a(board953x.o)
- .data          0x000000009f003710        0x0 board/atheros/board953x/libboard953x.a(init-953x.o)
- .data          0x000000009f003710        0x0 board/atheros/board953x/libboard953x.a(serial.o)
- .data          0x000000009f003710        0x0 board/atheros/board953x/libboard953x.a(ath_pci.o)
- .data          0x000000009f003710        0x0 board/atheros/board953x/libboard953x.a(953x.o)
- .data          0x000000009f003710        0x0 cpu/mips/libmips.a(interrupts.o)
- .data          0x000000009f003710        0x0 cpu/mips/libmips.a(cache.o)
+ .data          0x000000009f003680        0x0 cpu/mips/start_bootstrap.o
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(string.o)
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(crc32.o)
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(time.o)
+ .data          0x000000009f003680        0x0 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .data          0x000000009f003680        0x0 board/atheros/board953x/libboard953x.a(board953x.o)
+ .data          0x000000009f003680        0x0 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .data          0x000000009f003680        0x0 board/atheros/board953x/libboard953x.a(serial.o)
+ .data          0x000000009f003680        0x0 board/atheros/board953x/libboard953x.a(ath_pci.o)
+ .data          0x000000009f003680        0x0 board/atheros/board953x/libboard953x.a(953x.o)
+ .data          0x000000009f003680        0x0 cpu/mips/libmips.a(interrupts.o)
+ .data          0x000000009f003680        0x0 cpu/mips/libmips.a(cache.o)
 
-.got.plt        0x000000009f003704        0x0
+.got.plt        0x000000009f003674        0x0
  .got.plt       0x0000000000000000        0x0 cpu/mips/start_bootstrap.o
 
-.data.rel       0x000000009f003704       0x14
- .data.rel      0x000000009f003704       0x14 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
-                0x000000009f003704                init_sequence
-                0x000000009f003718                . = ALIGN (0x4)
+.data.rel       0x000000009f003674       0x14
+ .data.rel      0x000000009f003674       0x14 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+                0x000000009f003674                init_sequence
+                0x000000009f003688                . = ALIGN (0x4)
 
 .sdata
  *(.sdata)
  *(.sdata)
-                0x000000009f003720                . = ALIGN (0x10)
-                0x000000009f003720                _gp = .
-                0x000000009f003720                __got_start_bootstrap = .
+                0x000000009f003690                . = ALIGN (0x10)
+                0x000000009f003690                _gp = .
+                0x000000009f003690                __got_start_bootstrap = .
 
-.got            0x000000009f003720       0xb0
+.got            0x000000009f003690       0xb0
  *(.got)
- .got           0x000000009f003720       0xb0 cpu/mips/start_bootstrap.o
-                0x000000009f003720                _GLOBAL_OFFSET_TABLE_
-                0x000000009f0037d0                __got_end_bootstrap = .
-                0x000000009f0037d0                uboot_end_data_bootstrap = .
+ .got           0x000000009f003690       0xb0 cpu/mips/start_bootstrap.o
+                0x000000009f003690                _GLOBAL_OFFSET_TABLE_
+                0x000000009f003740                __got_end_bootstrap = .
+                0x000000009f003740                uboot_end_data_bootstrap = .
                 0x000000000000002c                num_got_entries = ((__got_end_bootstrap - __got_start_bootstrap) >> 0x2)
-                0x000000009f0037d0                . = ALIGN (0x4)
+                0x000000009f003740                . = ALIGN (0x4)
 
 .sbss
  *(.sbss)
 
-.bss            0x000000009f0037d0       0x30
+.bss            0x000000009f003740       0x30
  *(.bss)
- .bss           0x000000009f0037d0        0x0 cpu/mips/start_bootstrap.o
- .bss           0x000000009f0037d0       0x10 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
- .bss           0x000000009f0037e0        0x0 lib_bootstrap/libbootstrap.a(string.o)
- .bss           0x000000009f0037e0        0x0 lib_bootstrap/libbootstrap.a(crc32.o)
- .bss           0x000000009f0037e0       0x10 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
- .bss           0x000000009f0037f0        0x0 lib_bootstrap/libbootstrap.a(time.o)
- .bss           0x000000009f0037f0        0x0 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .bss           0x000000009f0037f0        0x0 board/atheros/board953x/libboard953x.a(board953x.o)
- .bss           0x000000009f0037f0       0x10 board/atheros/board953x/libboard953x.a(init-953x.o)
- .bss           0x000000009f003800        0x0 board/atheros/board953x/libboard953x.a(serial.o)
- .bss           0x000000009f003800        0x0 board/atheros/board953x/libboard953x.a(ath_pci.o)
- .bss           0x000000009f003800        0x0 board/atheros/board953x/libboard953x.a(953x.o)
- .bss           0x000000009f003800        0x0 cpu/mips/libmips.a(interrupts.o)
- .bss           0x000000009f003800        0x0 cpu/mips/libmips.a(cache.o)
-                0x000000009f003800                uboot_end_bootstrap = .
+ .bss           0x000000009f003740        0x0 cpu/mips/start_bootstrap.o
+ .bss           0x000000009f003740       0x10 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+ .bss           0x000000009f003750        0x0 lib_bootstrap/libbootstrap.a(string.o)
+ .bss           0x000000009f003750        0x0 lib_bootstrap/libbootstrap.a(crc32.o)
+ .bss           0x000000009f003750       0x10 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
+ .bss           0x000000009f003760        0x0 lib_bootstrap/libbootstrap.a(time.o)
+ .bss           0x000000009f003760        0x0 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .bss           0x000000009f003760        0x0 board/atheros/board953x/libboard953x.a(board953x.o)
+ .bss           0x000000009f003760       0x10 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .bss           0x000000009f003770        0x0 board/atheros/board953x/libboard953x.a(serial.o)
+ .bss           0x000000009f003770        0x0 board/atheros/board953x/libboard953x.a(ath_pci.o)
+ .bss           0x000000009f003770        0x0 board/atheros/board953x/libboard953x.a(953x.o)
+ .bss           0x000000009f003770        0x0 cpu/mips/libmips.a(interrupts.o)
+ .bss           0x000000009f003770        0x0 cpu/mips/libmips.a(cache.o)
+                0x000000009f003770                uboot_end_bootstrap = .
 Address of section .text set to 0x9f000000
 LOAD cpu/mips/start_bootstrap.o
 START GROUP
@@ -230,14 +230,14 @@ LOAD lib_bootstrap/libbootstrap.a
 LOAD board/atheros/board953x/libboard953x.a
 LOAD cpu/mips/libmips.a
 END GROUP
-LOAD /root/wr841n-bootloader/build/gcc-4.3.3/build_mips/staging_dir/usr/bin/../lib/gcc/mips-linux-uclibc/4.3.3/libgcc.a
+LOAD /root/wr841n-bootloader/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.3.3+cs_uClibc-0.9.30.1/toolchain-mips_r2_gcc-4.3.3+cs_uClibc-0.9.30.1/usr/bin/../lib/gcc/mips-openwrt-linux-uclibc/4.3.3/libgcc.a
 OUTPUT(bootstrap elf32-tradbigmips)
 
-.scommon        0x000000009f003800        0x8
- .scommon       0x000000009f003800        0x4 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
-                0x000000009f003800                monitor_flash_len
- .scommon       0x000000009f003804        0x4 lib_bootstrap/libbootstrap.a(string.o)
-                0x000000009f003804                ___strtok
+.scommon        0x000000009f003770        0x8
+ .scommon       0x000000009f003770        0x4 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+                0x000000009f003770                monitor_flash_len
+ .scommon       0x000000009f003774        0x4 lib_bootstrap/libbootstrap.a(string.o)
+                0x000000009f003774                ___strtok
 
 .pdr            0x0000000000000000      0x860
  .pdr           0x0000000000000000       0x20 cpu/mips/start_bootstrap.o
@@ -278,18 +278,18 @@ OUTPUT(bootstrap elf32-tradbigmips)
  .mdebug.abi32  0x0000000000000000        0x0 board/atheros/board953x/libboard953x.a(ath_pci.o)
  .mdebug.abi32  0x0000000000000000        0x0 cpu/mips/libmips.a(interrupts.o)
 
-.debug_abbrev   0x0000000000000000      0xfaa
+.debug_abbrev   0x0000000000000000      0xf9b
  .debug_abbrev  0x0000000000000000      0x2a1 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
  .debug_abbrev  0x00000000000002a1      0x21c lib_bootstrap/libbootstrap.a(string.o)
  .debug_abbrev  0x00000000000004bd       0x9c lib_bootstrap/libbootstrap.a(crc32.o)
  .debug_abbrev  0x0000000000000559      0x1a7 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
  .debug_abbrev  0x0000000000000700      0x179 lib_bootstrap/libbootstrap.a(time.o)
- .debug_abbrev  0x0000000000000879      0x164 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_abbrev  0x00000000000009dd      0x18d board/atheros/board953x/libboard953x.a(board953x.o)
- .debug_abbrev  0x0000000000000b6a      0x1b0 board/atheros/board953x/libboard953x.a(init-953x.o)
- .debug_abbrev  0x0000000000000d1a      0x117 board/atheros/board953x/libboard953x.a(serial.o)
- .debug_abbrev  0x0000000000000e31      0x114 board/atheros/board953x/libboard953x.a(ath_pci.o)
- .debug_abbrev  0x0000000000000f45       0x65 cpu/mips/libmips.a(interrupts.o)
+ .debug_abbrev  0x0000000000000879      0x155 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .debug_abbrev  0x00000000000009ce      0x18d board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_abbrev  0x0000000000000b5b      0x1b0 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .debug_abbrev  0x0000000000000d0b      0x117 board/atheros/board953x/libboard953x.a(serial.o)
+ .debug_abbrev  0x0000000000000e22      0x114 board/atheros/board953x/libboard953x.a(ath_pci.o)
+ .debug_abbrev  0x0000000000000f36       0x65 cpu/mips/libmips.a(interrupts.o)
 
 .debug_info     0x0000000000000000     0x2653
  .debug_info    0x0000000000000000      0x6aa lib_bootstrap/libbootstrap.a(bootstrap_board.o)
@@ -297,49 +297,49 @@ OUTPUT(bootstrap elf32-tradbigmips)
  .debug_info    0x0000000000000dd3      0x136 lib_bootstrap/libbootstrap.a(crc32.o)
  .debug_info    0x0000000000000f09      0x35b lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
  .debug_info    0x0000000000001264      0x28e lib_bootstrap/libbootstrap.a(time.o)
- .debug_info    0x00000000000014f2      0x4eb lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_info    0x00000000000019dd      0x24d board/atheros/board953x/libboard953x.a(board953x.o)
- .debug_info    0x0000000000001c2a      0x323 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .debug_info    0x00000000000014f2      0x4ed lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .debug_info    0x00000000000019df      0x24d board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_info    0x0000000000001c2c      0x321 board/atheros/board953x/libboard953x.a(init-953x.o)
  .debug_info    0x0000000000001f4d      0x180 board/atheros/board953x/libboard953x.a(serial.o)
  .debug_info    0x00000000000020cd      0x4de board/atheros/board953x/libboard953x.a(ath_pci.o)
  .debug_info    0x00000000000025ab       0xa8 cpu/mips/libmips.a(interrupts.o)
 
-.debug_line     0x0000000000000000      0xe26
- .debug_line    0x0000000000000000      0x1e5 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
- .debug_line    0x00000000000001e5      0x1b3 lib_bootstrap/libbootstrap.a(string.o)
- .debug_line    0x0000000000000398       0xdb lib_bootstrap/libbootstrap.a(crc32.o)
- .debug_line    0x0000000000000473      0x162 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
- .debug_line    0x00000000000005d5       0xf6 lib_bootstrap/libbootstrap.a(time.o)
- .debug_line    0x00000000000006cb      0x1d8 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_line    0x00000000000008a3      0x15f board/atheros/board953x/libboard953x.a(board953x.o)
- .debug_line    0x0000000000000a02      0x19b board/atheros/board953x/libboard953x.a(init-953x.o)
- .debug_line    0x0000000000000b9d      0x131 board/atheros/board953x/libboard953x.a(serial.o)
- .debug_line    0x0000000000000cce      0x119 board/atheros/board953x/libboard953x.a(ath_pci.o)
- .debug_line    0x0000000000000de7       0x3f cpu/mips/libmips.a(interrupts.o)
+.debug_line     0x0000000000000000      0xdd8
+ .debug_line    0x0000000000000000      0x1df lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+ .debug_line    0x00000000000001df      0x1b3 lib_bootstrap/libbootstrap.a(string.o)
+ .debug_line    0x0000000000000392       0xdb lib_bootstrap/libbootstrap.a(crc32.o)
+ .debug_line    0x000000000000046d      0x162 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
+ .debug_line    0x00000000000005cf       0xf6 lib_bootstrap/libbootstrap.a(time.o)
+ .debug_line    0x00000000000006c5      0x1c2 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .debug_line    0x0000000000000887      0x154 board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_line    0x00000000000009db      0x185 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .debug_line    0x0000000000000b60      0x120 board/atheros/board953x/libboard953x.a(serial.o)
+ .debug_line    0x0000000000000c80      0x119 board/atheros/board953x/libboard953x.a(ath_pci.o)
+ .debug_line    0x0000000000000d99       0x3f cpu/mips/libmips.a(interrupts.o)
 
-.debug_frame    0x0000000000000000      0x528
+.debug_frame    0x0000000000000000      0x524
  .debug_frame   0x0000000000000000       0xb0 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
  .debug_frame   0x00000000000000b0      0x16c lib_bootstrap/libbootstrap.a(string.o)
  .debug_frame   0x000000000000021c       0x20 lib_bootstrap/libbootstrap.a(crc32.o)
  .debug_frame   0x000000000000023c       0x38 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
  .debug_frame   0x0000000000000274       0x88 lib_bootstrap/libbootstrap.a(time.o)
  .debug_frame   0x00000000000002fc       0x48 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_frame   0x0000000000000344       0x7c board/atheros/board953x/libboard953x.a(board953x.o)
- .debug_frame   0x00000000000003c0       0x78 board/atheros/board953x/libboard953x.a(init-953x.o)
- .debug_frame   0x0000000000000438       0x90 board/atheros/board953x/libboard953x.a(serial.o)
- .debug_frame   0x00000000000004c8       0x30 board/atheros/board953x/libboard953x.a(ath_pci.o)
- .debug_frame   0x00000000000004f8       0x30 cpu/mips/libmips.a(interrupts.o)
+ .debug_frame   0x0000000000000344       0x78 board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_frame   0x00000000000003bc       0x78 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .debug_frame   0x0000000000000434       0x90 board/atheros/board953x/libboard953x.a(serial.o)
+ .debug_frame   0x00000000000004c4       0x30 board/atheros/board953x/libboard953x.a(ath_pci.o)
+ .debug_frame   0x00000000000004f4       0x30 cpu/mips/libmips.a(interrupts.o)
 
-.debug_loc      0x0000000000000000     0x145d
- .debug_loc     0x0000000000000000      0x180 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
- .debug_loc     0x0000000000000180      0x407 lib_bootstrap/libbootstrap.a(string.o)
- .debug_loc     0x0000000000000587       0xc8 lib_bootstrap/libbootstrap.a(crc32.o)
- .debug_loc     0x000000000000064f      0x21b lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
- .debug_loc     0x000000000000086a       0x6b lib_bootstrap/libbootstrap.a(time.o)
- .debug_loc     0x00000000000008d5      0x802 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_loc     0x00000000000010d7      0x10b board/atheros/board953x/libboard953x.a(board953x.o)
- .debug_loc     0x00000000000011e2      0x1a5 board/atheros/board953x/libboard953x.a(init-953x.o)
- .debug_loc     0x0000000000001387       0xd6 board/atheros/board953x/libboard953x.a(serial.o)
+.debug_loc      0x0000000000000000     0x147c
+ .debug_loc     0x0000000000000000      0x175 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
+ .debug_loc     0x0000000000000175      0x407 lib_bootstrap/libbootstrap.a(string.o)
+ .debug_loc     0x000000000000057c       0xc8 lib_bootstrap/libbootstrap.a(crc32.o)
+ .debug_loc     0x0000000000000644      0x21b lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
+ .debug_loc     0x000000000000085f       0x6b lib_bootstrap/libbootstrap.a(time.o)
+ .debug_loc     0x00000000000008ca      0x841 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .debug_loc     0x000000000000110b      0x10b board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_loc     0x0000000000001216      0x190 board/atheros/board953x/libboard953x.a(init-953x.o)
+ .debug_loc     0x00000000000013a6       0xd6 board/atheros/board953x/libboard953x.a(serial.o)
 
 .debug_pubnames
                 0x0000000000000000      0x46b
@@ -390,11 +390,11 @@ OUTPUT(bootstrap elf32-tradbigmips)
  .debug_aranges
                 0x0000000000000140       0x20 cpu/mips/libmips.a(interrupts.o)
 
-.debug_ranges   0x0000000000000000      0x1f0
+.debug_ranges   0x0000000000000000      0x1d8
  .debug_ranges  0x0000000000000000       0x18 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
  .debug_ranges  0x0000000000000018       0x98 lib_bootstrap/libbootstrap.a(LzmaWrapper.o)
- .debug_ranges  0x00000000000000b0      0x128 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
- .debug_ranges  0x00000000000001d8       0x18 board/atheros/board953x/libboard953x.a(board953x.o)
+ .debug_ranges  0x00000000000000b0      0x110 lib_bootstrap/libbootstrap.a(LzmaDecode.o)
+ .debug_ranges  0x00000000000001c0       0x18 board/atheros/board953x/libboard953x.a(board953x.o)
 
 .debug_str      0x0000000000000000      0xb9b
  .debug_str     0x0000000000000000      0x3a7 lib_bootstrap/libbootstrap.a(bootstrap_board.o)
