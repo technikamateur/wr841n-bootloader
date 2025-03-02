@@ -1,5 +1,4 @@
 export DEV_NAME=wr841nv11_eu
-all:
 
 ifndef DEV_NAME
 $(error "You have to define Dev name to use this Makefile")
@@ -122,6 +121,7 @@ export PATH:=$(TOOLPATH)/bin:${PATH}
 export MAKEARCH=$(MAKE) ARCH=$(KERNELARCH) CROSS_COMPILE=$(TOOLPREFIX)
 export UBOOTDIR=$(TOPDIR)/$(BOARD_TYPE)/boot/u-boot
 
+all: uboot
 
 uboot_clean:
 	@if test -f $(UBOOTDIR)/Makefile;then \
@@ -151,4 +151,3 @@ uboot:
 	else @echo This is bad; \
 	fi
 
-all: uboot
