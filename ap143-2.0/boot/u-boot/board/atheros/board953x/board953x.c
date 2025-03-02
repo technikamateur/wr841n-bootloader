@@ -100,7 +100,7 @@ void shift_register_set(unsigned int val)
 	uint32_t        revid;							\
 	if(((revid=ath_reg_rd(RST_REVISION_ID_ADDRESS))&0xff0)==0x140) 		\
 	printf(a " - Honey Bee 1.%d", revid & 0xf);				\
-	else									\ 
+	else									\
 	printf(a " - Honey Bee 2.%d", revid & 0xf);
 #endif
 

@@ -4097,16 +4097,16 @@
 #define DDR_PLL_CONFIG_OUT_DIV_VAL1             DDR_PLL_CONFIG_OUTDIV_SET(0)
 #define DDR_PLL_CONFIG_OUT_DIV_VAL2             DDR_PLL_CONFIG_OUTDIV_SET(0)
 #if (CONFIG_PRODUCT_ID == 0x08400002)
-#define DDR_PLL_DITHER_VAL                      DDR_PLL_DITHER_DITHER_EN_SET(1) | \	
+#define DDR_PLL_DITHER_VAL                      DDR_PLL_DITHER_DITHER_EN_SET(1) | \
 												DDR_PLL_DITHER_NFRAC_MAX_SET(0x3ff) | \
 												DDR_PLL_DITHER_NFRAC_MIN_SET(0x266) | \
-												DDR_PLL_DITHER_NFRAC_STEP_SET(7) | \											
+												DDR_PLL_DITHER_NFRAC_STEP_SET(7) | \
     											DDR_PLL_DITHER_UPDATE_COUNT_SET(0xf)
 #else																								
-#define DDR_PLL_DITHER_VAL 					    DDR_PLL_DITHER_DITHER_EN_SET(1) | \						
+#define DDR_PLL_DITHER_VAL 					    DDR_PLL_DITHER_DITHER_EN_SET(1) | \
 												DDR_PLL_DITHER_NFRAC_MAX_SET(0x2FB) | \
                                                 DDR_PLL_DITHER_NFRAC_MIN_SET(0x27B) | \
-                                                DDR_PLL_DITHER_NFRAC_STEP_SET(1) | \												
+                                                DDR_PLL_DITHER_NFRAC_STEP_SET(1) | \
 												DDR_PLL_DITHER_UPDATE_COUNT_SET(0xf)
 #endif												
                                                

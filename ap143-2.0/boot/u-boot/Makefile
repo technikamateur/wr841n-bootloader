@@ -2041,7 +2041,7 @@ ap143-2.0_config		:	unconfig
 	@echo '#define CONFIG_ATHEROS		1'	>include/config.h
 	@echo '#define CONFIG_MACH_QCA953x	1'	>>include/config.h
 	@echo '#define CFG_INIT_STACK_IN_SRAM	1'	>>include/config.h
-	@echo '#define CONFIG_'`echo $(CFG_BOARD_TYPE) | tr [a-z] [A-Z] | sed s/-/_/g`'	1' >>include/config.h
+# @echo '#define CONFIG_'`echo $(CFG_BOARD_TYPE) | tr [a-z] [A-Z] | sed s/-/_/g`'    1' >>include/config.h
 	@echo '#define __CONFIG_BOARD_NAME $(CFG_BOARD_TYPE)' >>include/config.h
 	@echo '#define CONFIG_BOARD_NAME "$(CFG_BOARD_TYPE)"' >>include/config.h
 	@echo "#define BUILD_VERSION "\"$(BUILDVERSION)\" >>include/config.h
