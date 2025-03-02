@@ -15,7 +15,7 @@ export PRODUCT_CONFIG_DIR=$(TOPDIR)/build/products_config/$(DEV_NAME)/
 # include basic config file, it will give basic info
 # such as toolchain,kernel version,flash size and so on 
 #include scripts/$(DEV_NAME)/basic.config
-include $(PRODUCT_CONFIG_DIR)/basic.config
+include basic.config
 
 
 ifndef BOARD_TYPE
