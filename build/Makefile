@@ -1,21 +1,8 @@
-export DEV_NAME=wr841nv11_eu
-
-ifndef DEV_NAME
-$(error "You have to define Dev name to use this Makefile")
-endif
-
 export TOPDIR=$(PWD)/..
 
-#config file dirs
-export PRODUCT_CONFIG_DIR=$(TOPDIR)/build/products_config/$(DEV_NAME)/
-
-
-# include all necessary config files 
-# include basic config file, it will give basic info
-# such as toolchain,kernel version,flash size and so on 
-#include scripts/$(DEV_NAME)/basic.config
 include basic.config
 
+export KERNELARCH=mips
 
 ifndef BOARD_TYPE
 $(error "You have to define Board type to use this Makefile")
@@ -33,10 +20,7 @@ ifndef TOOLARCH
 $(error "Must specify TOOLARCH value")
 endif
 
-# To enable library optimization (removing unused object code from
-# shared libraries) set BUILD_LIBRARYOPT to 'y' else 'n'
-BUILD_LIBRARYOPT := n
-
+export BUILD_OPTIMIZED=y
 ifndef  BUILD_OPTIMIZED
 export BUILD_OPTIMIZED=n
 export STRIP=$(TOOLPREFIX)strip
