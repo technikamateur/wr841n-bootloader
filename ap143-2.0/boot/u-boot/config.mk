@@ -210,7 +210,7 @@ ifeq ($(PCI_CLOCK),PCI_66M)
 CFLAGS := $(CFLAGS) -DPCI_66M
 endif
 
-CFLAGS += $(UBOOT_GCC_4_3_3_EXTRA_CFLAGS) -g
+CFLAGS += -g
 
 #########################################################################
 

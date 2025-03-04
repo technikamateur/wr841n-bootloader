@@ -1,6 +1,50 @@
 export TOPDIR=$(PWD)/..
 
-include basic.config
+# Set the toolchain path
+export BOARD_TYPE=ap143-2.0
+export CFG_BOARD_TYPE=$(BOARD_TYPE)
+export TOOLCHAIN=gcc-4.3.3
+export TOOLPREFIX=mips-linux-uclibc-
+export TOOLARCH=build_mips/staging_dir/usr
+
+export KERNEL=mips-linux-2.6.31
+
+export COMPRESSED_UBOOT=1
+export FLASH_SIZE=4
+
+export ATH_GMAC0_MII=ATHR_MII
+export ATH_GMAC1_MII=ATHR_RGMII
+
+export ATH_LINK_INTR=1
+export ATH_DMA_CHECK=1
+export ATH_SWITCH_ONLY_MODE=0
+export ETH_CONFIG=_s27
+
+ifeq ($(CONFIG_TYPE),wrap)
+BUILD_SUFFIX=_wrap
+endif
+
+ifneq ($(ETH_CONFIG),_s27)
+export ATH_GMAC0_MII=ATHR_RGMII
+export BUILD_EXT=$(ETH_CONFIG)$(ETH_CONFIG2)$(BUILD_SUFFIX)
+else
+export BUILD_EXT=$(BUILD_SUFFIX)
+endif
+
+export AR9100=0
+export AR7240_EMU=1
+
+#for firmware recovery use
+export FW_RECOVERY=y
+export FW_RECOVERY_DEV=wr841nv11
+#use factory reset button
+export FW_INPUT_BUTTON_GPIO=12
+#use wps led gpio
+export FW_OUTPUT_LED_GPIO=3
+export FW_OUTPUT_LED_ON=0
+
+export PRODUCT_ID = 0x08410011
+
 
 export KERNELARCH=mips
 
