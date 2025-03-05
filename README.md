@@ -29,4 +29,4 @@ Modify the Build Configuration:
 - Open the `Makefile` and update the `TOOLPATH` and `TOOLPREFIX` variables to reflect the location of your downloaded toolchain.
 
 ### Compile 
-Simply run `make` inside the `wr841n-bootloader/build` directory.
+Simply run `make` .

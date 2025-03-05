@@ -1,4 +1,4 @@
-export TOPDIR=$(PWD)/..
+export TOPDIR=$(PWD)
 
 # Set the toolchain path
 export BOARD_TYPE=ap143-2.0
@@ -133,7 +133,7 @@ uboot_build_copy:
 	cd $(UBOOTDIR) && $(MAKEARCH) mrproper
 	cd $(UBOOTDIR) && $(MAKEARCH) $(BOARD_TYPE)_config
 	@echo ========= build dir: $(TOPDIR)/build ============
-	cd $(UBOOTDIR) && $(MAKEARCH) all BUILD_DIR=$(TOPDIR)/build
+	cd $(UBOOTDIR) && $(MAKEARCH) all BUILD_DIR=$(TOPDIR)
 
 	mkdir -p $(TOPDIR)/binary
 	cp -f $(UBOOTDIR)/${UBOOT_BINARY} $(TOPDIR)/binary/$(UBOOT_FILE)

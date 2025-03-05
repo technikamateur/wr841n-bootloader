@@ -199,7 +199,7 @@ $(SUBDIRS):
 ifeq ($(COMPRESSED_UBOOT),1)
 
 #LZMA = $(BUILD_DIR)/util/lzma
-LZMA = $(BUILD_DIR)/../util/lzma/bin/lzma
+LZMA = $(BUILD_DIR)/util/lzma/bin/lzma
 
 tuboot.bin:	System.map bootstrap.bin u-boot.lzimg	
 		@cat bootstrap.bin > $@
