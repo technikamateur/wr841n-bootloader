@@ -1,6 +1,6 @@
 # wr841n-bootloader
 
-This repository contains the source code extracted from the TP-Link WR841n v11 router's bootloader. It's created for educational and exploratory purposes.
+This repository contains the source code from the TP-Link WR841n v11 router's bootloader. The code is intended for educational and exploratory purposes and will be modified and updated over time.
 
 ## Prerequisites 🛠️
 
