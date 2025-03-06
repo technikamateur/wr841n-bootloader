@@ -114,7 +114,7 @@ endif
 export PATH:=$(TOOLPATH)/bin:${PATH}
 
 export MAKEARCH=$(MAKE) ARCH=$(KERNELARCH) CROSS_COMPILE=$(TOOLPREFIX)
-export UBOOTDIR=$(TOPDIR)/$(BOARD_TYPE)/boot/u-boot
+export UBOOTDIR=$(TOPDIR)/u-boot
 
 all: uboot
 
