@@ -125,10 +125,7 @@ uboot_clean:
 	else echo "Do nothing for clean uboot"; \
 	fi
 
-
-#if you have uboot code,then you will execute uboot_build_copy
-#this rule will compile your uboot code and copy uboot to your image direcory
-uboot_build_copy:
+uboot:
 	@echo Making uboot at `date`
 	cd $(UBOOTDIR) && $(MAKEARCH) mrproper
 	cd $(UBOOTDIR) && $(MAKEARCH) $(BOARD_TYPE)_config
@@ -138,11 +135,4 @@ uboot_build_copy:
 	mkdir -p $(TOPDIR)/binary
 	cp -f $(UBOOTDIR)/${UBOOT_BINARY} $(TOPDIR)/binary/$(UBOOT_FILE)
 	@echo End Making uboot at `date`
-
-#new uboot rule for somebody may have no uboot code
-uboot:
-	@if test -f $(UBOOTDIR)/Makefile;then \
-	$(MAKE) uboot_build_copy;\
-	else @echo This is bad; \
-	fi
 
